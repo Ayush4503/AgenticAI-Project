@@ -7,6 +7,13 @@ class Config:
         
 
     def get_llm_option(self):
-        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")       
+        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")      
+    
+    def get_usecase_options(self):
+        return self.config["DEFAULT"].get("USECASE_OPTIONS").split(", ")
+    
+    def get_grq_model_option(self):
+        return self.config["DEFAULT"].get
+        
         
         
