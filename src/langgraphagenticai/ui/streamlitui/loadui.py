@@ -25,19 +25,12 @@ class LoadStreamlitUI:
         }
         
     
-    def render_requirements(self):
-        st.markdown("## Requirements Submission ")
-        st.session_state["requirements"] = st.text_area(
-            "Enter your requirements:",
-            height=200,
-            key="req_input"
-        )
     
     
     def load_streamlit_ui(self):
         st.set_page_config(page_title="Agentic AI" + self.config.get_page_title(), layout="wide")
         st.header("Agentic" + self.config.get_page_title())
-        st.session_state.timeframe=""
+        st.session_state.timeframe=''
         st.session_state.IsFetchButtonClicked = False
         st.session_state.IsSDLC = False
         

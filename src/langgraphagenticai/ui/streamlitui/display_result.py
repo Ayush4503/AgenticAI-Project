@@ -1,5 +1,7 @@
 import streamlit as st 
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+import json
+
 
 class DisplayResultStreamlit:
     def __init__(self, usecase, graph, user_message):
@@ -13,7 +15,7 @@ class DisplayResultStreamlit:
         graph = self.graph
         user_message = self.user_message
         
-        if usecase == " Basic Chatbot":
+        if usecase == "Basic Chatbot":
                 for event in graph.stream({'messages':("user",user_message)}):
                     print(event.values())
                     for value in event.values():
