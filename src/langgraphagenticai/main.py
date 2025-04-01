@@ -46,7 +46,7 @@ def load_langraph_agenticai_app():
                 
                 graph_builder = GraphBuilder(model)
                 try:
-                    graph = graph_builder.basic_chatbot_build_graph(usecase)
+                    graph = graph_builder.setup_graph(usecase)
                     DisplayResultStreamlit(usecase,graph,user_message).display_result_on_ui()
                 
                 except Exception as e:
